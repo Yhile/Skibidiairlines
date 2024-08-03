@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Flights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: rgb(17, 0, 116);
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            display: inline-block;
+            background: rgb(17, 0, 116);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #219909;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Skibidi Airlines Booking</h1>
+            <nav></nav>
+                
+                    <li><a href="index.html">Home</a></li>
+                    
+                
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="main">
+            <h2>Book Your Flight</h2>
+            <form action="/submit-flight-booking" method="post">
+                <div class="form-group">
+                    <label for="departure-airport">Departure Airport:</label>
+                    <select id="departure-airport" name="departure-airport" required>
+                        <option value="PIT">Pittsburgh (PIT)</option>
+                        <option value="JFK">New York (JFK)</option>
+                        <option value="LAX">Los Angeles (LAX)</option>
+                        <option value="ORD">Chicago (ORD)</option>
+                        <option value="ATL">Atlanta (ATL)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="arrival-airport">Arrival Airport:</label>
+                    <select id="arrival-airport" name="arrival-airport" required>
+                        <option value="LAS">Las Vegas (LAS)</option>
+                        <option value="MIA">Miami (MIA)</option>
+                        <option value="SEA">Seattle (SEA)</option>
+                        <option value="DFW">Dallas (DFW)</option>
+                        <option value="SFO">San Francisco (SFO)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="departure-date">Departure Date:</label>
+                    <input type="date" id="departure-date" name="departure-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="return-date">Return Date:</label>
+                    <input type="date" id="return-date" name="return-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="passengers">Number of Passengers:</label>
+                    <select id="passengers" name="passengers" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <button type="button" class="btn" id="continueButton">Book now</button>
+
+                <script>
+                    document.getElementById("continueButton").addEventListener("click", function() {
+                        window.location.href = "class.html"; // Replace with your target page URL
+                    });
+                </script>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

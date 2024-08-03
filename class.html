@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Flights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+            text-align: center;
+        }
+        header {
+            background: rgb(17, 0, 116);
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px;
+        }
+        .main {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            display: inline-block;
+            background: rgb(17, 0, 116);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #219909;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Skibidi Airlines Booking</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="main">
+            <img src="Screenshot 2024-08-02 185347.png" alt="a330">
+            <h1>First Class or Economy</h1>
+            <h3>First class:$999</h3>
+            <h3>Economy:$300</h3>
+            <h6>Based on Average</h6>
+            <form>
+                <div class="form-group">
+                    <label for="class">Choose Class:</label>
+                    <select id="class" name="class">
+                        <option value="first">First Class</option>
+                        <option value="economy">Economy</option>
+                    </select>
+                </div>
+                <button type="button" class="btn" id="continueButton">Continue to payment</button>
+
+                <script>
+                    document.getElementById("continueButton").addEventListener("click", function() {
+                        window.location.href = "pay.html"; // Replace with your target page URL
+                    });
+                </script>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
